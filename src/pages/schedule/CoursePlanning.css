@@ -1,0 +1,263 @@
+.course-planning-container {
+  display: flex;
+}
+
+.course-planning-dashboard {
+  flex-grow: 1;
+  margin-left: 280px;
+  margin-right: 20px;
+}
+.add-to-calendar-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 12px;
+  margin-top: 15px;
+  gap: 8px;
+  height: 40px;
+  width: 201px;
+  border: none;
+  background: #005387;
+  
+  cursor: pointer;
+}
+
+
+.add-to-calendar-label {
+  line-height: 22px;
+  font-size: 17px;
+  color: #fff;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.add-to-calendar-button:hover {
+  background: #003454 ;
+}
+
+.add-to-calendar-button:hover .svg-icon {
+  animation: slope 1s linear infinite;
+}
+
+@keyframes slope {
+  0% {}
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {}
+}
+
+
+.course-planning-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.trash-icon {
+  font-size: 16px; /* Adjust the size as needed */
+}
+
+.course-planning-list {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-planning-item {
+  margin-bottom: 20px;
+}
+
+.course-planning-time,
+.course-planning-course {
+  font-size: 1.6rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+
+
+.noselect {
+  height: 40px;
+  width: 201px;
+  margin-top: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+ margin-bottom: 15px;
+ margin-left: 15px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
+  position: relative; /* Add this for the absolute positioning of icon */
+}
+
+.noselect, .noselect span {
+  transition: 200ms;
+}
+
+.noselect .text {
+  transform: translateX(35px);
+  font-weight: bold;
+  line-height: 22px;
+  font-size: 17px;
+  color: #fff;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.noselect .icon {
+  position: relative;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(100px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noselect svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.noselect:hover {
+  background: #ff3636;
+}
+
+.noselect:hover .text {
+  color: transparent;
+}
+
+.noselect:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(-23px);
+}
+
+.noselect:focus {
+  outline: none;
+}
+
+.noselect:active .icon svg {
+  transform: scale(0.8);
+}
+
+
+.course-planning-divider {
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+/* Modal container */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal title */
+.modal-content h2 {
+  margin-top: 0;
+}
+
+/* Modal buttons */
+.modal-content button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal close button */
+.modal-content .close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.course-planning-edit-button,
+.course-planning-add-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+/* Adjust modal container styles */
+.Add-modal .MuiDialog-paper {
+  width: 600px; /* Increase the width of the modal */
+  max-width: 600px; /* Ensure it doesn't exceed this width */
+}
+
+/* Increase the input fields and labels' size within the modal */
+.Add-modal .MuiDialogContent-root {
+  display: flex;
+  flex-direction: column;
+}
+/* Adjust the font size of the Scheduler events */
+.scheduler-container .rs__cell {
+  font-size: 3rem; /* Adjust the font size as needed */
+}
+
+.scheduler-container .rs__event__content {
+  font-size: 3rem; /* Adjust the font size as needed */
+}
+
+
+.Add-modal input[type="datetime-local"],
+.Add-modal .MuiTextField-root {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+.Schedule-Buttons{
+  display: inline-flex;
+  padding:"15px";
+}
+
+.Add-modal label {
+  font-size: 1.2rem;
+}
+
+
+
+.course-planning-edit-button:hover,
+.course-planning-add-button:hover {
+  background-color: #0056b3;
+}
+
+.edit-icon {
+  font-size: 16px;
+}

@@ -1,0 +1,77 @@
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border-radius: 15px;
+    font-size: 13px; /* Increase submit button text size */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  h2{
+    text-align: center;
+  }
+  .form-section {
+    margin-bottom: 20px;
+    font-size: 13px; /* Increase submit button text size */
+
+  }
+  
+  .form-section label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333; /* Darken label text color */
+    font-size: 13px; /* Increase submit button text size */
+
+  }
+  
+  .form-section input[type="text"],
+  .form-section input[type="email"],
+  .form-section textarea,
+  .form-section select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    font-size: 13px; /* Increase submit button text size */
+
+  }
+  
+  .form-section input[type="text"]:focus,
+  .form-section input[type="email"]:focus,
+  .form-section textarea:focus,
+  .form-section select:focus {
+    border-color: #007bff; /* Change border color on focus */
+  }
+  
+  .form-section select {
+    appearance: none;
+    color: black;
+    font-size: 13px; /* Increase submit button text size */
+
+  }
+  
+  .form-section textarea {
+    resize: none; /* Disable textarea resizing */
+    font-size: 13px; /* Increase submit button text size */
+
+  }
+  
+  .form-section input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px; /* Increase submit button text size */
+
+  }
+  
+  .form-section input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

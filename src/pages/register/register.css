@@ -1,0 +1,187 @@
+/* Form container */
+.form-container {
+    padding: 2rem;
+    margin: 2rem auto;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input fields */
+  .form-input, .form-select {
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .custom-input {
+    font-size: 15px !important; /* Increase input text size */
+    height: 40px !important; /* Increase input height */
+  }
+  
+  .custom-input .form-label {
+    font-size: 20px !important; /* Increase label text size */
+  }
+  .css-xilmwd-MuiPaper-root-MuiAlert-root {
+margin: 3% !important;
+  }
+  .register-btn {
+    width: 2em;
+    height: 2em;
+    margin: 0.5em;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   button:hover {
+    color: black;
+   }
+   
+   
+   
+   .register-btn-container {
+    display: flex;
+    justify-content: center;
+    --color-text: #ffffff;
+    --color-background: #005387;
+    --color-outline: #ff145b80;
+    --color-shadow: #00000080;
+  }
+  
+  .register-btn-content {
+    display: flex;
+    align-items: center;
+    
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--color-text);
+    background: var(--color-background);
+    transition: 1s;
+    border-radius: 100px;
+    box-shadow: 0 0 0.2em 0 var(--color-background);
+  }
+  
+  .register-btn-content:hover, .register-btn-content:focus {
+    transition: 0.5s;
+    -webkit-animation: btn-content 1s;
+    animation: btn-content 1s;
+    outline: 0.1em solid transparent;
+    outline-offset: 0.2em;
+    box-shadow: 0 0 0.4em 0 var(--color-background);
+  }
+  
+  .register-btn-content .register-icon-arrow {
+    transition: 0.5s;
+    margin-right: 0px;
+    transform: scale(0.6);
+  }
+  
+  .register-btn-content:hover .register-icon-arrow {
+    transition: 0.5s;
+    margin-right: 25px;
+  }
+  
+  .register-icon-arrow {
+    width: 20px;
+    margin-left: 15px;
+    position: relative;
+    top: 6%;
+  }
+    
+  /* SVG */
+  #arrow-icon-one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+  }
+  
+  #arrow-icon-two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+  }
+  
+  .register-btn-content:hover #arrow-icon-three {
+    animation: color_anim 1s infinite 0.2s;
+  }
+  
+  .register-btn-content:hover #arrow-icon-one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+  }
+  
+  .register-btn-content:hover #arrow-icon-two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+  }
+  
+  /* SVG animations */
+  @keyframes color_anim {
+    0% {
+      fill: white;
+    }
+  
+    50% {
+      fill: var(--color-background);
+    }
+  
+    100% {
+      fill: white;
+    }
+  }
+  
+  /* Button animations */
+  @-webkit-keyframes btn-content {
+    0% {
+      outline: 0.2em solid var(--color-background);
+      outline-offset: 0;
+    }
+  }
+  
+  @keyframes btn-content {
+    0% {
+      outline: 0.2em solid var(--color-background);
+      outline-offset: 0;
+    }
+  }
+  
+  
+  /* Register button */
+  .register-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Form group */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Form label */
+  .form-label {
+    font-weight: bold;
+    color: #333;
+  }
+/* FooterContainer.css */
+.css-1df5zuj {
+  padding-bottom: 4.5% !important;
+}

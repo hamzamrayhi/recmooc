@@ -1,0 +1,21 @@
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot img {
+  width: 75px; /* Adjust the size of the image as needed /
+  height: auto;
+  cursor: pointer; / Make the icon clickable */
+}
+.jQaoOK{
+  margin-left:22.5% !important;
+}
+.dDQpgv{
+margin-left: 60%;
+}
+.caBnVO{
+color: white;
+}

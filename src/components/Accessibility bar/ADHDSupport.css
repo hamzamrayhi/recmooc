@@ -1,0 +1,17 @@
+/* ADHDSupport.css */
+.adhd-support-active {
+    position: relative;
+    overflow: visible; /* Allow overflow */
+  }
+  
+  #cursor-spotlight {
+    position: absolute;
+    pointer-events: none;
+    width: 100%; /* Full width */
+    height: 200px; /* Adjust height as needed */
+    background: transparent;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 1); /* Masking effect */
+    transform: translateY(-50%);
+    z-index: 10000;
+  }
+  

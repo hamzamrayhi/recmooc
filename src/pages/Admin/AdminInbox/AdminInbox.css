@@ -1,0 +1,57 @@
+.admin-inbox-container {
+  padding: 20px;
+}
+
+.admin-inbox-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.message-card {
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.message-card-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.message-card-avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.message-card-content {
+  padding: 16px;
+}
+
+.message-card-text {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.message-card-strong {
+  font-weight: bold;
+}
+
+.message-timestamp {
+  font-size: 0.875rem;
+  color: #999;
+  text-align: right;
+  margin-top: 16px;
+}
+
+.hr-separator {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 16px 0;
+}
+

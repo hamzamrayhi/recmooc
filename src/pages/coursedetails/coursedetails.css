@@ -1,0 +1,253 @@
+/* coursedetails.css */
+
+/* Define styles for the body to occupy the full height of the viewport */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Set font family for better readability */
+  background-color: #f7f7f7;
+  width: 100%; /* Set background color */
+}
+.reviews-container {
+margin-top: 20px; /* Add some top margin to separate it from the content above */
+}
+.gtco-testimonials {
+  position: relative;
+  margin-top: 30px;
+}
+
+.gtco-testimonials h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 50px;
+}
+
+.owl-stage-outer {
+  padding: 30px 0;
+}
+
+.owl-nav {
+  display: none;
+}
+
+.owl-dots {
+  text-align: center;
+}
+
+.owl-dots span {
+  position: relative;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: block;
+  background: #fff;
+  border: 2px solid #01b0f8;
+  margin: 0 5px;
+}
+
+.owl-dots .active span {
+  background: #01b0f8;
+  height: 12px;
+  width: 12px;
+  margin-bottom: -1px;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 8px 30px -7px #c9dff0;
+  margin: 0 20px;
+  padding: 0 10px;
+  border-radius: 20px;
+  border: 0;
+}
+
+.card-img-top {
+  max-width: 100px;
+  border-radius: 50%;
+  margin: 15px auto 0;
+  box-shadow: 0 8px 20px -4px #95abbb;
+  width: 100px;
+  height: 100px;
+}
+
+.card h5 {
+  color: #01b0f8;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.card h5 span {
+  font-size: 18px;
+  color: #666666;
+}
+
+.card p {
+  font-size: 18px;
+  color: #555;
+  padding-bottom: 15px;
+}
+
+.add-to-bookmarks-btn {
+  background-color: #005387;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.related-courses-carousel-container{
+  width: 100%;
+}
+.add-to-bookmarks-btn:hover {
+  background-color: #003954;
+}
+
+.reviews-title {
+  font-size: 2.5rem; /* Increase the font size */
+  font-weight: bold; /* Make it bold */
+  margin-bottom: 20px; /* Add some bottom margin to separate it from the content below */
+  color: #005387; /* Set text color */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 2px; /* Add letter spacing for a stylish look */
+  border-bottom: 2px solid #005387; /* Add a bottom border for emphasis */
+  padding-bottom: 10px; /* Keep padding as desired */
+  margin-top: 20px; /* Add some padding to space out the border */
+  width: 85%; /* Adjust the width of the border */
+}
+
+
+/* Define styles for the main content area */
+.course-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top */
+  
+}
+.course-details-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Align content to the space between */
+  align-items: flex-start;
+  max-width: auto; /* Adjust as needed */
+  margin: 10px auto; /* Center the content horizontally */
+  padding: 25px;
+  background-color: #fff; /* Set background color */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  font-size: large;
+}
+
+.course-details-image {
+  width: 40%; /* Set width for the image container */
+}
+
+.course-details-image img {
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+}
+
+.course-details-info {
+  flex: 1;
+  margin-left: 20px; /* Add space between image and details */
+}
+
+.course-details-info h2 {
+  font-size: 50px; /* Increase font size for headings */
+  color: #333; /* Set text color */
+}
+
+.course-details-info p {
+  margin: 5px 0; /* Adjust margin for paragraphs */
+  color: #666; /* Set text color */
+  font-size: large;
+}
+
+
+
+/* Ensure the footer stays at the bottom of the viewport */
+.footer {
+  margin-top: auto; /* Push the footer to the bottom */
+}
+.course-rating {
+  display: flex;
+  align-items: center;
+  color: #f69c08;
+}
+.course-rating p {
+  margin-right: 5px; /* Adjust margin as needed */
+}
+/* coursedetails.css */
+
+/* Styles for the Enroll button */
+.enroll-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enroll-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Additional styles to enhance the button appearance */
+.enroll-button::before {
+  content: "\f105"; /* Add an icon before the button text (Font Awesome icon) */
+  font-family: "Font Awesome 5 Free";
+  margin-right: 10px;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .enroll-button {
+    font-size: 14px;
+  }
+}
+
+/* Add this CSS to your coursedeetails.css file or equivalent */
+
+
+
+
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.review-info {
+  flex: 1;
+}
+
+.review-text {
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.review-rating {
+  font-weight: bold;
+}
+
+
+/* Optional: You can add more styles to customize the appearance further */
+

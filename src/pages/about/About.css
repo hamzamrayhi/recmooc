@@ -1,0 +1,102 @@
+/* Adjustments for .about-us-container */
+.about-us-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  /* Header styles */
+  .about-us-container h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Section title styles */
+  .about-us-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  /* Paragraph styles */
+  .about-us-container p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* List styles */
+  .about-us-container ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  
+  /* List item styles */
+  .about-us-container li {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  /* Adjustments for sections spacing */
+  .about-us-container .mission-section,
+  .about-us-container .what-we-do-section,
+  .about-us-container .accessibility-commitment-section,
+  .about-us-container .team-section,
+  .about-us-container .get-involved-section {
+    margin-bottom: 50px;
+  }
+ 
+
+/* Video container */
+.about-us-container video {
+    width: 100%; /* Ensure the video fills its container */
+    display: block; /* Ensure the video is displayed as a block element */
+    margin-bottom: 20px; /* Add some space below the video */
+  }
+  
+  /* Video controls */
+  .about-us-container video::-webkit-media-controls {
+    display: flex; /* Use flexbox to align controls */
+    justify-content: space-between; /* Space out controls evenly */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for controls */
+    padding: 10px; /* Add padding around controls */
+    border-radius: 8px; /* Add rounded corners to controls */
+  }
+  
+  /* Style individual control buttons */
+  .about-us-container video::-webkit-media-controls-play-button,
+  .about-us-container video::-webkit-media-controls-volume-slider {
+    background-color: transparent; /* Make play button and volume slider transparent */
+    color: white; /* Set control button color to white */
+  }
+  
+  .about-us-container video::-webkit-media-controls-play-button:hover,
+  .about-us-container video::-webkit-media-controls-volume-slider:hover {
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  
+  /* Responsive adjustments */
+  @media only screen and (max-width: 768px) {
+    /* Adjust font sizes for smaller screens */
+    .about-us-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .about-us-container h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .about-us-container p,
+    .about-us-container li {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  }
+  

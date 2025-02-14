@@ -1,0 +1,113 @@
+.admin-reviews-container {
+  display: flex;
+   /* Ensure it takes the full height of the viewport */
+}
+
+.admin-reviews-dashboard {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.admin-reviews-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.trash-icon {
+  font-size: 16px; /* Adjust the size as needed */
+}
+
+.admin-reviews-list {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-review-item {
+  margin-bottom: 20px;
+}
+
+.admin-review-text,
+.admin-review-user {
+  font-size: 1.6rem;
+  margin: 5px 0;
+}
+
+.admin-review-delete-button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.admin-review-delete-button:hover {
+  background-color: #c62828;
+}
+
+.admin-review-divider {
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+/* Modal container */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal title */
+.modal-content h2 {
+  margin-top: 0;
+}
+
+/* Modal buttons */
+.modal-content button {
+  margin-top: 10px;
+  margin-right: 10px; /* Add margin between buttons */
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:last-child {
+  margin-right: 0; /* Remove margin from the last button */
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal close button */
+.modal-content .close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

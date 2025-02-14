@@ -1,0 +1,16 @@
+.clickable-star-rating {
+    font-size: 24px; /* Adjust the font size of the stars */
+  }
+  
+  .clickable-star-rating span {
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .star-filled {
+    color: gold; /* Color for filled star */
+  }
+  
+  .star-empty {
+    color: lightgray; /* Color for empty star */
+  }
+  

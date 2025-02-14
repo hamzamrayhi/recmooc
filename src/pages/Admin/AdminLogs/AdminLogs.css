@@ -1,0 +1,51 @@
+.admin-logs-container {
+    display: flex; /* Ensures proper layout alignment with the navbar */
+    min-height: 100vh; /* Ensures the container takes up at least the full height of the viewport */
+    align-items: center; /* Centers the chat container vertically */
+    justify-content: center; /* Centers the chat container horizontally */
+}
+
+.chat-container {
+    width: 100%; /* Limits the width and does not let it stretch too far */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 20px;
+    margin-left: 200px; /* Adds some space around the container */
+    padding: 20px;
+    background: white; /* A clean white background for the chat area */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadows for a layer effect */
+    border-radius: 8px; /* Rounded corners for the chat container */
+    overflow-y: auto; /* Allows for scrolling within the container */
+}
+
+.bubble {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #e8e8e8; /* A slightly darker background for the bubble to stand out */
+    border-left: 5px solid #5C67F2; /* A solid left border for a modern look */
+    color: #333; /* Dark grey color for text for better readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A nice and clean font family */
+    font-size: 1rem;
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for hover effects */
+}
+
+.bubble:hover {
+    background-color: #f0f0f0; /* Lightens the bubble on hover */
+    border-color: #3a41c5; /* Changes the border color on hover */
+}
+
+.admin-logs-title {
+    font-size: 2.5rem;
+    color: #333;
+    /* Centers the title */
+    margin: 20px 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .chat-container {
+        width: 95%; /* More width for smaller screens */
+        margin-left: 0; /* Ensures it aligns well on smaller devices */
+        margin-top: 20px;
+    }
+}

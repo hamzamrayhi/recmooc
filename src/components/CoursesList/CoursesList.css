@@ -1,0 +1,189 @@
+/* CSS Reset */
+body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #005387; /* Changed the text color to the specified blue */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+.paste-button {
+    position: relative;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 2rem;
+  }
+  
+  .button {
+    background-color: #4CAF50;
+    color: #212121;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .dropdown-content {
+    display: none;
+    font-size: 13px;
+    position: absolute;
+    z-index: 1;
+    min-width: 200px;
+    background-color: #212121;
+    border: 2px solid #4CAF50;
+    border-radius: 0px 15px 15px 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-content a {
+    color: #4CAF50;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+    transition: 0.1s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #4CAF50;
+    color: #212121;
+  }
+  
+  .dropdown-content a:focus {
+    background-color: #212121;
+    color: #4CAF50;
+  }
+  
+  .dropdown-content #top:hover {
+    border-radius: 0px 13px 0px 0px;
+  }
+  
+  .dropdown-content #bottom:hover {
+    border-radius: 0px 0px 13px 13px;
+  }
+  
+  .paste-button:hover .dropdown-content {
+    display: block;
+  }
+  
+h1 {
+    color: #005387; /* Changed the heading color to the specified blue */
+    text-align: center; /* Center the heading */
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #005387; /* Changed the label color to the specified blue */
+}
+
+.select-arrow-container {
+    position: relative;
+    display: inline-flex; /* Change to inline-flex for proper alignment */
+    align-items: center; /* Center the arrow vertically with the text */
+    margin-bottom: 20px; /* Added margin for separation */
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    background-color: #005387; /* Updated the background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer; /* Add cursor style to indicate interactivity */
+}
+
+/* Style for the selected category */
+select:focus {
+    outline: none; /* Remove the focus border */
+    box-shadow: 0 0 5px #005387; /* Add a subtle box shadow when focused */
+}
+
+/* Style for the arrow icon */
+.select-arrow-icon {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0;
+    border-color: #fff transparent transparent transparent;
+    pointer-events: none; /* Make sure the arrow doesn't interfere with the select */
+    margin-left: 5px; /* Add margin to separate the arrow from the text */
+}
+
+.courses-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px;
+    justify-content: center; /* Center the course cards */
+}
+
+.course-card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+    scroll-snap-align: start;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center; /* Center the text in the course card */
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+.course-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.course-details {
+    padding: 15px;
+    text-align: center; /* Center the text in the course details */
+}
+
+.course-details h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #005387; /* Changed the text color to the specified blue */
+}
+
+.course-details p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+.course-details a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #005387; /* Changed the text color to the specified blue */
+    font-weight: bold;
+}
+
+.course-details a:hover {
+    text-decoration: underline;
+}

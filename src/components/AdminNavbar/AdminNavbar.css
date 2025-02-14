@@ -1,0 +1,153 @@
+/* AdminNavbar.css */
+
+.user-image {
+    width: 150px; /* Set the width of the user image container */
+    height: 150px; /* Set the height of the user image container */
+    border-radius: 50%; /* Make the container circular */
+    overflow: hidden; /* Hide any overflow from the image */
+}
+
+.user-image img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #005387;
+    padding-top: 20px; /* Increase padding top */
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.logo-container {
+    padding: 20px; /* Increase padding for the logo container */
+    align-self: flex-start; /* Align the user image at the very top */
+}
+
+.navbar-nav {
+    flex-grow: 1; /* Allow the navbar-nav to grow and fill the available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; /* Center the links vertically */
+}
+
+.settings {
+    align-self: flex-end; /* Align the cog icon at the bottom */
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+.nav-link {
+    color:black;
+    display: flex;
+    align-items: center;
+    padding: 15px; /* Increase padding for nav links */
+    font-size: 18px; /* Increase font size for nav links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for color change */
+}
+
+.nav-link:hover {
+    background-color: #fff; /* Change background color on hover */
+    color: #005387; /* Change text color on hover */
+}
+
+.icon {
+    margin-right: 15px; /* Increase margin between icon and text */
+    font-size: 30px; /* Increase font size for icons */
+}
+.settings {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 900px; /* Adjust the position to the left of the cog icon */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none; /* Hide the dropdown menu by default */
+}
+
+.settings:hover .dropdown-menu {
+    display: block; /* Display the dropdown menu on hover */
+}
+
+.dropdown-menu > * {
+    transition: all 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.dropdown-menu > *:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+    color: #005387; /* Change text color on hover */
+}
+
+.settings .nav-link {
+    padding: 10px; /* Increase padding for settings link */
+}
+
+.settings .nav-link:hover {
+    background-color: #fff; /* Change background color on hover */
+    color: #005387; /* Change text color on hover */
+}
+
+/* Targeting the user icon directly */
+.sidebar .fa-user {
+    font-size: 40px; /* Increase font size for the user icon */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 220px; /* Adjust sidebar width for smaller screens */
+    }
+
+    .nav-link {
+        padding: 12px; /* Reduce padding for smaller screens */
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
+
+    .icon {
+        font-size: 24px; /* Adjust icon size for smaller screens */
+    }
+
+    .settings .nav-link {
+        padding: 5px; /* Reduce padding for settings link on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 180px; /* Further adjust sidebar width for even smaller screens */
+    }
+
+    .nav-link {
+        padding: 10px; /* Further reduce padding for smaller screens */
+        font-size: 14px; /* Further reduce font size for smaller screens */
+    }
+
+    .icon {
+        font-size: 20px; /* Adjust icon size for smaller screens */
+    }
+
+    .settings .nav-link {
+        padding: 3px; /* Further reduce padding for settings link on smaller screens */
+    }
+    .sidebar .settings {
+        /* Your conflicting CSS rules */
+        left: 205px !important;
+    }
+}
