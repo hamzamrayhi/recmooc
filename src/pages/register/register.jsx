@@ -62,7 +62,7 @@ function Register() {
     });
   };
 
-  useEffect(() => {http://192.168.100.35/api/enums
+  useEffect(() => {
     const fetchEnumValues = async () => {
       try {
         const response = await axios.get("http://192.168.100.35/api/enums");
