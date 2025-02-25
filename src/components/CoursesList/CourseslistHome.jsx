@@ -196,7 +196,7 @@ const CourseslistHome = () => {
     const fetchMostRatedCourses = async () => {
       try {
         const response = await axios.get(
-          `http://192.168.100.35/api/best-rated-courses/${selectedCategory}`
+          `http://192.168.100.35/api/most-reviewed-courses/${selectedCategory}`
         );
         setMostRatedCourses(response.data);
       } catch (error) {
