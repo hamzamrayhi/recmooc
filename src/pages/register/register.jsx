@@ -62,10 +62,10 @@ function Register() {
     });
   };
 
-  useEffect(() => {
+  useEffect(() => {http://192.168.100.35/api/enums
     const fetchEnumValues = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/enums");
+        const response = await axios.get("http://192.168.100.35/api/enums");
         setEnumValues(response.data);
       } catch (error) {
         console.error("Error fetching enum values:", error);
@@ -228,7 +228,7 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/register",
+        "http://192.168.100.35/api/register",
         formData,
         {
           headers: {

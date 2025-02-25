@@ -59,7 +59,7 @@ const CoursePlanning = () => {
   const fetchStudySchedules = useCallback(async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/studyschedules/${userId}`
+        `http://192.168.100.35/api/studyschedules/${userId}`
       );
       setStudySchedules(response.data);
     } catch (error) {
@@ -94,7 +94,7 @@ const CoursePlanning = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/api/createstudyschedule",
+        "http://192.168.100.35/api/createstudyschedule",
         newSchedule
       );
       const createdSchedule = response.data;
@@ -112,7 +112,7 @@ const CoursePlanning = () => {
   const handleDeleteByMoocName = useCallback(async () => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/deletestudyschedule/${deleteMoocName}`
+        `http://192.168.100.35/api/deletestudyschedule/${deleteMoocName}`
       );
       setStudySchedules((prevSchedules) =>
         prevSchedules.filter((schedule) => schedule.mooc_name !== deleteMoocName)
@@ -149,7 +149,7 @@ const CoursePlanning = () => {
       };
 
       await axios.put(
-        `http://localhost:5000/api/updatestudyschedule/${selectedSchedule.id}`,
+        `http://192.168.100.35/api/updatestudyschedule/${selectedSchedule.id}`,
         updatedSchedule
       );
 

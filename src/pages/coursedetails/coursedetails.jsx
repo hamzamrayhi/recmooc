@@ -132,7 +132,7 @@ const CourseDetails = () => {
       try {
         const token = localStorage.getItem('token');
         const response = await axios.get(
-          `http://localhost:5000/api/coursedetails/${id}`,
+          `http://192.168.100.35/api/coursedetails/${id}`,
           {
             headers: {
               'Authorization': `Bearer ${token}` // Include the token in the headers
@@ -152,7 +152,7 @@ const CourseDetails = () => {
       try {
         const token = localStorage.getItem('token');
         const response = await axios.get(
-          `http://localhost:5000/api/${id}/reviews`,
+          `http://192.168.100.35/api/${id}/reviews`,
           {
             headers: {
               'Authorization': `Bearer ${token}` // Include the token in the headers
@@ -182,7 +182,7 @@ const CourseDetails = () => {
         const token = localStorage.getItem('token');
         // Fetch related courses based on the category of the current course
         const response = await axios.get(
-          `http://localhost:5000/api/courses/${course.mooc_category}`,
+          `http://192.168.100.35/api/courses/${course.mooc_category}`,
           {
             headers: {
               'Authorization': `Bearer ${token}` // Include the token in the headers
@@ -205,7 +205,7 @@ const CourseDetails = () => {
         const token = localStorage.getItem('token'); // Get the JWT token from localStorage
 
         const response = await axios.post(
-            `http://localhost:5000/api/bookmarks/${courseId}`,
+            `http://192.168.100.35/api/bookmarks/${courseId}`,
             null,
             {
                 headers: {
@@ -246,7 +246,7 @@ const CourseDetails = () => {
     try {
       const token = localStorage.getItem('token'); // Get the JWT token from localStorage
       const response = await axios.delete(
-        `http://localhost:5000/api/bookmarks/${id}`,
+        `http://192.168.100.35/api/bookmarks/${id}`,
         {
           headers: {
             'Authorization': `Bearer ${token}` // Include the token in the headers
@@ -290,7 +290,7 @@ const CourseDetails = () => {
     const fetchBookmarkedCourses = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/api/bookmarked-courses/${userId}`, {
+        const response = await axios.get(`http://192.168.100.35/api/bookmarked-courses/${userId}`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -337,7 +337,7 @@ const CourseDetails = () => {
     try {
       const token = localStorage.getItem('token'); // Get the JWT token from localStorage
       // Make API call to '/runAxeCore' endpoint
-      const response = await axios.get('http://localhost:5000/api/runAxeCore', {
+      const response = await axios.get('http://192.168.100.35/api/runAxeCore', {
         headers: {
           'Authorization': `Bearer ${token}` // Include the token in the headers
         },
@@ -487,7 +487,7 @@ const CourseDetails = () => {
                           <ReviewCard>
                             <div className="review-header">
                               <img
-                                src={`http://localhost:5000/api/${review.user_picture.replace(
+                                src={`http://192.168.100.35/api/${review.user_picture.replace(
                                   /\\/g,
                                   "/"
                                 )}`}

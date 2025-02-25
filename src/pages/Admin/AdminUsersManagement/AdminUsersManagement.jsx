@@ -88,7 +88,7 @@ function AdminUsersManagement() {
   };
 
   const fetchUsers = () => {
-    const url = new URL("http://localhost:5000/api/usersSearchbar");
+    const url = new URL("http://192.168.100.35/api/usersSearchbar");
     const params = { user_name: searchTerm, page: currentPage, limit: usersPerPage };
     url.search = new URLSearchParams(params).toString();
 
@@ -212,7 +212,7 @@ function AdminUsersManagement() {
         return;
       }
   
-      fetch(`http://localhost:5000/api/users/${selectedUser.id}/${adminId}`, {
+      fetch(`http://192.168.100.35/api/users/${selectedUser.id}/${adminId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -235,7 +235,7 @@ function AdminUsersManagement() {
         return;
       }
   
-      fetch(`http://localhost:5000/api/users/${adminId}`, {
+      fetch(`http://192.168.100.35/api/users/${adminId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -281,7 +281,7 @@ function AdminUsersManagement() {
   
 
   const confirmDeleteUser = () => {
-    fetch(`http://localhost:5000/api/users/${userToDelete}/${adminId}`, {
+    fetch(`http://192.168.100.35/api/users/${userToDelete}/${adminId}`, {
       method: "DELETE",
     })
       .then(() => {

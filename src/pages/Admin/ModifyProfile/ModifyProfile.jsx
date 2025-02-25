@@ -25,7 +25,7 @@ function ModifyProfile() {
       try {
         const admin = JSON.parse(localStorage.getItem("user"));
         const adminId = admin.id;
-        const response = await axios.get(`http://localhost:5000/api/admin/${adminId}`);
+        const response = await axios.get(`http://192.168.100.35/api/admin/${adminId}`);
         const adminData = response.data.admin; // Access admin data from responseData.admin
 
         setInitialName(adminData.name);
@@ -101,7 +101,7 @@ function ModifyProfile() {
       try {
         const admin = JSON.parse(localStorage.getItem("user"));
         const adminId = admin.id;
-        const response = await axios.put(`http://localhost:5000/api/admin/${adminId}`, {
+        const response = await axios.put(`http://192.168.100.35/api/admin/${adminId}`, {
           name,
           email,
           password: password || undefined // Only include password if it's changed

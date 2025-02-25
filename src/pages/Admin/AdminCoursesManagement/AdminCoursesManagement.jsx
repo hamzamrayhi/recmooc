@@ -67,7 +67,7 @@ function AdminCoursesManagement() {
     setCourseLevel(event.target.value);
   };
   const fetchCourses = () => {
-    const url = new URL("http://localhost:5000/api/coursesSearchbar");
+    const url = new URL("http://192.168.100.35/api/coursesSearchbar");
     const params = { mooc_name: searchTerm, page: currentPage, limit: coursesPerPage };
     url.search = new URLSearchParams(params).toString();
   
@@ -123,7 +123,7 @@ function AdminCoursesManagement() {
       course_levels: courseLevel,
     };
 
-    fetch(`http://localhost:5000/api/courses/${adminId}`, {
+    fetch(`http://192.168.100.35/api/courses/${adminId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -170,7 +170,7 @@ function AdminCoursesManagement() {
     console.log("Deleting Course:", courseToDelete);
     try {
       await axios.delete(
-        `http://localhost:5000/api/courses/${courseToDelete}/${adminId}`
+        `http://192.168.100.35/api/courses/${courseToDelete}/${adminId}`
       );
       console.log("Course deleted successfully");
       fetchCourses();

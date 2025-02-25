@@ -29,7 +29,7 @@ function ResetPasswordPage() {
 
     try {
       // Call your backend API to confirm and reset the password
-      const response = await axios.post('http://localhost:5000/api/reset-password-confirm', {
+      const response = await axios.post('http://192.168.100.35/api/reset-password-confirm', {
         token,
         newPassword,
       });

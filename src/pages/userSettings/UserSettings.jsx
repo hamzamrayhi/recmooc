@@ -63,7 +63,7 @@ function UserSettings() {
   const fetchEnumValues = async () => {
     console.log("Fetching enum values...");
     try {
-      const response = await axios.get("http://localhost:5000/api/enums");
+      const response = await axios.get("http://192.168.100.35/api/enums");
       setEnumValues(response.data);
     } catch (error) {
       console.error("Error fetching enum values:", error);
@@ -148,7 +148,7 @@ function UserSettings() {
       });
   
       const response = await axios.put(
-        `http://localhost:5000/api/users/${userId}/settings`,
+        `http://192.168.100.35/api/users/${userId}/settings`,
         formData,
         {
           headers: {
@@ -188,7 +188,7 @@ function UserSettings() {
 
   const getImageSource = () => {
     if (typeof user.user_picture === "string") {
-      return `http://localhost:5000/api/${user.user_picture.replace(/\//g, "/")}`;
+      return `http://192.168.100.35/api/${user.user_picture.replace(/\//g, "/")}`;
     } else {
       return URL.createObjectURL(user.user_picture);
     }
