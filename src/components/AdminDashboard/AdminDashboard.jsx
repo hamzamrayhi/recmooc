@@ -37,32 +37,32 @@ const AdminDashboard = () => {
 
     useEffect(() => {
         // Fetch total reviews
-        axios.get('http://localhost:5000/api/reviewscount')
+        axios.get('http://192.168.100.35/api/reviewscount')
             .then(response => setTotalReviews(response.data.totalReviews))
             .catch(error => console.error('Error fetching total reviews:', error));
 
         // Fetch total users
-        axios.get('http://localhost:5000/api/userscount')
+        axios.get('http://192.168.100.35/api/userscount')
             .then(response => setTotalUsers(response.data.totalUsers))
             .catch(error => console.error('Error fetching total users:', error));
 
         // Fetch total courses
-        axios.get('http://localhost:5000/api/coursescount')
+        axios.get('http://192.168.100.35/api/coursescount')
             .then(response => setTotalCourses(response.data.totalCourses))
             .catch(error => console.error('Error fetching total courses:', error));
 
         // Fetch highest rated courses
-        axios.get('http://localhost:5000/api/highestRatedCourses')
+        axios.get('http://192.168.100.35/api/highestRatedCourses')
             .then(response => setHighestRatedCourses(response.data.data))
             .catch(error => console.error('Error fetching highest rated courses:', error));
 
         // Fetch top accessibility features
-        axios.get('http://localhost:5000/api/topAccessFeatures')
+        axios.get('http://192.168.100.35/api/topAccessFeatures')
             .then(response => setTopAccessFeatures(response.data.data))
             .catch(error => console.error('Error fetching top accessibility features:', error));
 
         // Fetch highest rated providers
-        axios.get('http://localhost:5000/api/highestRatedProviders')
+        axios.get('http://192.168.100.35/api/highestRatedProviders')
             .then(response => setHighestRatedProviders(response.data.data))
             .catch(error => console.error('Error fetching highest rated providers:', error));
 

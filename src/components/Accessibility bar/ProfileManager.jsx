@@ -31,7 +31,7 @@ const ProfileManager = ({
     const { id } = userData; // Retrieve user ID
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/profiles/${id}`
+        `http://192.168.100.35/api/profiles/${id}`
       );
       const data = response.data;
       if (data.success) {
@@ -59,7 +59,7 @@ const ProfileManager = ({
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/profiles",
+        "http://192.168.100.35/api/profiles",
         newProfile
       );
       const data = response.data;
@@ -105,7 +105,7 @@ const ProfileManager = ({
   const deleteProfile = async (profileId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/profiles/${profileId}`
+        `http://192.168.100.35/api/profiles/${profileId}`
       );
       const data = response.data;
       if (data.success) {

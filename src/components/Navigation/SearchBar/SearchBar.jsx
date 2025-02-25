@@ -12,7 +12,7 @@ const SearchBar = () => {
     const fetchSuggestions = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/searchbar/courses/suggestions?searchText=${encodeURIComponent(
+          `http://192.168.100.35/api/searchbar/courses/suggestions?searchText=${encodeURIComponent(
             searchText
           )}&instructorName=${encodeURIComponent(searchText)}`
         );

@@ -75,7 +75,7 @@ const HighestRatedUniversitiesCarousel = ({ categoryName }) => {
   useEffect(() => {
     const FetchHighestRatedUniversities = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api//highest-rated-universities/${categoryName}`);
+        const response = await axios.get(`http://192.168.100.35/api//highest-rated-universities/${categoryName}`);
         setHighestRatedUniversities(response.data);
         console.log(response.data);
       } catch (error) {

@@ -34,11 +34,11 @@ const Chatbot = () => {
       try {
         if (isAuthenticated()){
           const user = JSON.parse(window.localStorage.getItem("user"));
-          const response = await axios.post('http://localhost:5000/api/chatbot', { message: userMessage, user: user });
+          const response = await axios.post('http://192.168.100.35/api/chatbot', { message: userMessage, user: user });
           triggerNextStep({ value: response.data.response, trigger: '4' });
         }
         else{
-          const response = await axios.post('http://localhost:5000/api/chatbot', { message: userMessage });
+          const response = await axios.post('http://192.168.100.35/api/chatbot', { message: userMessage });
         triggerNextStep({ value: response.data.response, trigger: '4' });
         }
         

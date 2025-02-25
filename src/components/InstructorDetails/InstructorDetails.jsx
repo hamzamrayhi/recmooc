@@ -7,7 +7,7 @@ function InstructorDetails() {
 
   const fetchHighestRatedInstructor = (category) => {
     fetch(
-      `http://localhost:5000/api/highest-rated-instructor/${encodeURIComponent(
+      `http://192.168.100.35/api/highest-rated-instructor/${encodeURIComponent(
         category
       )}`
     )
