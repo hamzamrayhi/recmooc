@@ -61,7 +61,7 @@ const NavigationUser = () => {
   };
   const handleCheckAccessibility = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/runAxeCore?url=${encodeURIComponent(url)}`);
+      const response = await fetch(`${process.env.REACT_APP_API_KEY}/runAxeCore?url=${encodeURIComponent(url)}`);
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
@@ -102,7 +102,7 @@ const NavigationUser = () => {
     setIssueModalOpen(true);
     // Fetch user's issues when opening the modal
     try {
-      const response = await axios.get(`http://localhost:5000/api/user/${user.id}/issues`);
+      const response = await axios.get(`${process.env.REACT_APP_API_KEY}/user/${user.id}/issues`);
       setIssues(response.data);
     } catch (error) {
       console.error('Error fetching user issues:', error);
@@ -240,7 +240,7 @@ const NavigationUser = () => {
                 }}
               >
                 <img
-                  src={`http://localhost:5000/api/${userPicture.replace(/\//g, "/")}`}
+                  src={`${process.env.REACT_APP_API_KEY}/${userPicture.replace(/\//g, "/")}`}
                   alt="User Picture"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />

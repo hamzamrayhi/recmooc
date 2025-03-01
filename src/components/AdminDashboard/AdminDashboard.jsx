@@ -37,32 +37,32 @@ const AdminDashboard = () => {
 
     useEffect(() => {
         // Fetch total reviews
-        axios.get('http://192.168.100.35/api/reviewscount')
+        axios.get(`${process.env.REACT_APP_API_KEY}/reviewscount`)
             .then(response => setTotalReviews(response.data.totalReviews))
             .catch(error => console.error('Error fetching total reviews:', error));
 
         // Fetch total users
-        axios.get('http://192.168.100.35/api/userscount')
+        axios.get(`${process.env.REACT_APP_API_KEY}/userscount`)
             .then(response => setTotalUsers(response.data.totalUsers))
             .catch(error => console.error('Error fetching total users:', error));
 
         // Fetch total courses
-        axios.get('http://192.168.100.35/api/coursescount')
+        axios.get(`${process.env.REACT_APP_API_KEY}/coursescount`)
             .then(response => setTotalCourses(response.data.totalCourses))
             .catch(error => console.error('Error fetching total courses:', error));
 
         // Fetch highest rated courses
-        axios.get('http://192.168.100.35/api/highestRatedCourses')
+        axios.get(`${process.env.REACT_APP_API_KEY}/highestRatedCourses`)
             .then(response => setHighestRatedCourses(response.data.data))
             .catch(error => console.error('Error fetching highest rated courses:', error));
 
         // Fetch top accessibility features
-        axios.get('http://192.168.100.35/api/topAccessFeatures')
+        axios.get(`${process.env.REACT_APP_API_KEY}/topAccessFeatures`)
             .then(response => setTopAccessFeatures(response.data.data))
             .catch(error => console.error('Error fetching top accessibility features:', error));
 
         // Fetch highest rated providers
-        axios.get('http://192.168.100.35/api/highestRatedProviders')
+        axios.get(`${process.env.REACT_APP_API_KEY}/highestRatedProviders`)
             .then(response => setHighestRatedProviders(response.data.data))
             .catch(error => console.error('Error fetching highest rated providers:', error));
 

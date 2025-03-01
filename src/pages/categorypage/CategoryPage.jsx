@@ -64,7 +64,7 @@ const CategoryPage = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://192.168.100.35/api/categories');
+        const response = await axios.get(`${process.env.REACT_APP_API_KEY}/categories`);
         setCategories(response.data);
         console.log('Fetched categories:', response.data); // Log the fetched categories
       } catch (error) {
@@ -93,7 +93,7 @@ const CategoryPage = () => {
       try {
         console.log(selectedFilters);
         const response = await axios.get(
-          `http://192.168.100.35/api/category/${categoryName}/page/${pageNumber}`,
+          `${process.env.REACT_APP_API_KEY}/category/${categoryName}/page/${pageNumber}`,
           {
             params: selectedFilters,
           }
@@ -108,7 +108,7 @@ const CategoryPage = () => {
     fetchData();
 
     axios
-      .get("http://192.168.100.35/api/filter-options")
+      .get(`${process.env.REACT_APP_API_KEY}/filter-options`)
       .then((response) => {
         setFilterOptions(response.data);
 

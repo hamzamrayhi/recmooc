@@ -178,7 +178,7 @@ const CourseslistHome = () => {
     const fetchCourses = async () => {
       try {
         const response = await axios.get(
-          `http://192.168.100.35/api/courses/${selectedCategory}`
+          `${process.env.REACT_APP_API_KEY}/courses/${selectedCategory}`
         );
         setCourses(response.data);
         setLoading(false);
@@ -196,7 +196,7 @@ const CourseslistHome = () => {
     const fetchMostRatedCourses = async () => {
       try {
         const response = await axios.get(
-          `http://192.168.100.35/api/most-reviewed-courses/${selectedCategory}`
+          `${process.env.REACT_APP_API_KEY}/most-reviewed-courses/${selectedCategory}`
         );
         setMostRatedCourses(response.data);
       } catch (error) {
@@ -210,7 +210,7 @@ const CourseslistHome = () => {
   const fetchReviews = async () => {
     try {
       const response = await axios.get(
-        `http://192.168.100.35/api/reviews/${selectedCategory}`
+        `${process.env.REACT_APP_API_KEY}/reviews/${selectedCategory}`
       );
       console.log("Reviews data:", response.data); // Log reviews data
       setReviews(response.data);
@@ -415,7 +415,7 @@ const CourseslistHome = () => {
                 <div key={index}>
                   {console.log(
                     "User Image URL:",
-                    `http://192.168.100.35/api/${review.user_picture.replace(
+                    `${process.env.REACT_APP_API_KEY}/${review.user_picture.replace(
                       /\//g,
                       "/"
                     )}`
@@ -432,7 +432,7 @@ const CourseslistHome = () => {
                     </ReviewDescription>
                     <UserSection>
                       <UserImage
-                        src={`http://192.168.100.35/api/${review.user_picture.replace(
+                        src={`${process.env.REACT_APP_API_KEY}/${review.user_picture.replace(
                           /\\/g,
                           "/"
                         )}`}

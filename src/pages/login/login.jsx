@@ -54,7 +54,7 @@ function Login() {
     }
 
     try {
-      const response = await axios.post('http://192.168.100.35/api/login', {
+      const response = await axios.post(`${process.env.REACT_APP_API_KEY}/login`, {
         email,
         password
       });

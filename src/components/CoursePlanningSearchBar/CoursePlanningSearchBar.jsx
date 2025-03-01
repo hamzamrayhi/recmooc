@@ -10,7 +10,7 @@ const CoursePlanningSearchBar = ({ searchText, setSearchText, onSelect }) => {
     const fetchSuggestions = async () => {
       try {
         const response = await fetch(
-          `http://192.168.100.35/api/searchbar/courses/suggestions?searchText=${encodeURIComponent(
+          `${process.env.REACT_APP_API_KEY}/searchbar/courses/suggestions?searchText=${encodeURIComponent(
             searchText
           )}&instructorName=${encodeURIComponent(searchText)}`
         );

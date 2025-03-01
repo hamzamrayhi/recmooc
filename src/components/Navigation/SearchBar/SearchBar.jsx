@@ -12,7 +12,7 @@ const SearchBar = () => {
     const fetchSuggestions = async () => {
       try {
         const response = await fetch(
-          `http://192.168.100.35/api/searchbar/courses/suggestions?searchText=${encodeURIComponent(
+          `${process.env.REACT_APP_API_KEY}/searchbar/courses/suggestions?searchText=${encodeURIComponent(
             searchText
           )}&instructorName=${encodeURIComponent(searchText)}`
         );
@@ -64,7 +64,7 @@ const SearchBar = () => {
         onChange={handleSearchChange}
         value={searchText}
         inputProps={{ "aria-label": "search" }}
-        style={{ flex: 1, color: "#000", fontSize: "18px", "& .MuiInputBase-input": { padding: "10px", fontSize: "18px" } }}
+        style={{ flex: 1, color: "#000", fontSize: "18px", "& .MuiInputBaseinput": { padding: "10px", fontSize: "18px" } }}
       />
       {filteredSuggestions.length > 0 && (
         <ul style={{ listStyleType: "none", padding: 0, position: "absolute", top: "calc(100% + 5px)", left: 0, width: "100%", maxHeight: "200px", overflowY: "auto", backgroundColor: "#fff", border: "1px solid #ccc", borderRadius: "4px", boxShadow: "0 2px 4px rgba(0,0,0,0.1)", zIndex: 999 }}>

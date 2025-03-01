@@ -11,7 +11,7 @@ const Categories = ({ selectedCategory }) => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://192.168.100.35/api/categories');
+        const response = await axios.get(`${process.env.REACT_APP_API_KEY}/categories`);
         setCategoriesData(response.data);
         console.log('Fetched categories:', response.data); // Log the fetched categories
         setLoading(false);

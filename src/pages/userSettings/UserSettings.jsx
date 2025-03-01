@@ -63,7 +63,7 @@ function UserSettings() {
   const fetchEnumValues = async () => {
     console.log("Fetching enum values...");
     try {
-      const response = await axios.get("http://192.168.100.35/api/enums");
+      const response = await axios.get(`${process.env.REACT_APP_API_KEY}/enums`);
       setEnumValues(response.data);
     } catch (error) {
       console.error("Error fetching enum values:", error);
@@ -148,7 +148,7 @@ function UserSettings() {
       });
   
       const response = await axios.put(
-        `http://192.168.100.35/api/users/${userId}/settings`,
+        `${process.env.REACT_APP_API_KEY}/users/${userId}/settings`,
         formData,
         {
           headers: {
@@ -174,7 +174,7 @@ function UserSettings() {
         setAlertOpen(true);
       }
       // Optionally redirect user
-      // window.location.href = "http://localhost:3000/userindex";
+      
       
     } catch (error) {
       console.error("Error updating user settings:", error);
@@ -188,7 +188,7 @@ function UserSettings() {
 
   const getImageSource = () => {
     if (typeof user.user_picture === "string") {
-      return `http://192.168.100.35/api/${user.user_picture.replace(/\//g, "/")}`;
+      return `${process.env.REACT_APP_API_KEY}/${user.user_picture.replace(/\//g, "/")}`;
     } else {
       return URL.createObjectURL(user.user_picture);
     }

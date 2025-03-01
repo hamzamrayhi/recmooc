@@ -53,6 +53,7 @@ function AdminCoursesManagement() {
   const navigate = useNavigate();
   const [courseLevel, setCourseLevel] = useState('');
   const [searchTerm, setSearchTerm] = useState("");
+  const apiKey = process.env.REACT_APP_API_KEY
 
   const adminId = localStorage.getItem("user")
     ? JSON.parse(localStorage.getItem("user")).id
@@ -67,7 +68,7 @@ function AdminCoursesManagement() {
     setCourseLevel(event.target.value);
   };
   const fetchCourses = () => {
-    const url = new URL("http://192.168.100.35/api/coursesSearchbar");
+    const url = new URL(`${process.env.REACT_APP_API_KEY}/api/coursesSearchbar`);
     const params = { mooc_name: searchTerm, page: currentPage, limit: coursesPerPage };
     url.search = new URLSearchParams(params).toString();
   
@@ -123,7 +124,7 @@ function AdminCoursesManagement() {
       course_levels: courseLevel,
     };
 
-    fetch(`http://192.168.100.35/api/courses/${adminId}`, {
+    fetch(`${process.env.REACT_APP_API_KEY}/api/courses/${adminId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -170,7 +171,7 @@ function AdminCoursesManagement() {
     console.log("Deleting Course:", courseToDelete);
     try {
       await axios.delete(
-        `http://192.168.100.35/api/courses/${courseToDelete}/${adminId}`
+        `${process.env.REACT_APP_API_KEY}/api/courses/${courseToDelete}/${adminId}`
       );
       console.log("Course deleted successfully");
       fetchCourses();

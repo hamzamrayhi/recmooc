@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LinkButtonContainer = styled.a`
+export const LinkButtonContainer = styled.div`
   background-color: ${(props) => (props.color === "#005387" ? "#005387" : "transparent")};
   color: ${(props) => (props.color === "#005387" ? "#fff" : "#fff")};
   height: ${(props) => props.height};

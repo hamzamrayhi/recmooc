@@ -11,7 +11,7 @@ const Messages = ({ issueId }) => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get(`http://192.168.100.35/api/contactus/${issueId}/replies`);
+        const response = await axios.get(`${process.env.REACT_APP_API_KEY}/contactus/${issueId}/replies`);
         setMessages(response.data);
       } catch (error) {
         console.error('Error fetching messages:', error);
@@ -41,9 +41,9 @@ const Messages = ({ issueId }) => {
         payload.userId = user.id;
       }
   
-      await axios.post(`http://192.168.100.35/api/contactus/${issueId}/response`, payload);
+      await axios.post(`${process.env.REACT_APP_API_KEY}/contactus/${issueId}/response`, payload);
       setReplyText('');
-      const response = await axios.get(`http://192.168.100.35/api/contactus/${issueId}/replies`);
+      const response = await axios.get(`${process.env.REACT_APP_API_KEY}/contactus/${issueId}/replies`);
       setMessages(response.data);
     } catch (error) {
       console.error('Error sending reply:', error);

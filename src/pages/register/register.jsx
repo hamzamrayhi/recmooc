@@ -28,7 +28,6 @@ function Register() {
   const [ageError, setAgeError] = useState("");
   const [locationError, setLocationError] = useState("");
   const [enumErrors, setEnumErrors] = useState({});
-  const [showRequiredFieldsError, setShowRequiredFieldsError] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -49,7 +48,7 @@ function Register() {
   });
 
   const [isErrorAlertOpen, setIsErrorAlertOpen] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("err");
   const [errorSeverity, setErrorSeverity] = useState("error");
   const [step, setStep] = useState(1); // New state for form step
 
@@ -65,7 +64,7 @@ function Register() {
   useEffect(() => {
     const fetchEnumValues = async () => {
       try {
-        const response = await axios.get("http://192.168.100.35/api/enums");
+        const response = await axios.get(`${process.env.REACT_APP_API_KEY}/enums`);
         setEnumValues(response.data);
       } catch (error) {
         console.error("Error fetching enum values:", error);
@@ -228,7 +227,7 @@ function Register() {
 
     try {
       const response = await axios.post(
-        "http://192.168.100.35/api/register",
+        `${process.env.REACT_APP_API_KEY}/register`,
         formData,
         {
           headers: {

@@ -28,7 +28,7 @@ const Modal = ({ show, onClose, courseId, userId }) => {
 
     try {
       await axios.post(
-        `http://192.168.100.35/api/${courseId}/add-review`,
+        `http://${process.env.REACT_APP_API_KEY}/${courseId}/add-review`,
         {
           userid: userId,
           review,

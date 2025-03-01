@@ -66,7 +66,7 @@ function CreateAdminAccount() {
         }
 
         try {
-            const response = await axios.post(`http://192.168.100.35/api/createAdmin/${adminid}`, { name, email, password });
+            const response = await axios.post(`${process.env.REACT_APP_API_KEY}/createAdmin/${adminid}`, { name, email, password });
 
             if (response.data.success) {
                 console.log(response.data.message);

@@ -24,7 +24,7 @@ const [alertSeverity, setAlertSeverity] = useState('info');
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await fetch('http://192.168.100.35/api/forgot-password', {
+    const response = await fetch(`${process.env.REACT_APP_API_KEY}/forgot-password`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

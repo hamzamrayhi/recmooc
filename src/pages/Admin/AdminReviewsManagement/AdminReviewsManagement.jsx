@@ -24,7 +24,7 @@ export default function AdminReviewsManagement() {
 
   const fetchReviews = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/reviews");
+      const response = await axios.get(`${process.env.REACT_APP_API_KEY}/reviews`);
       setReviews(response.data);
     } catch (error) {
       console.error("Error fetching reviews:", error);
@@ -41,7 +41,7 @@ export default function AdminReviewsManagement() {
   const confirmDeleteReview = async () => {
     try {
       // Call the delete review API with the review ID to delete
-      await axios.delete(`http://localhost:5000/api/reviews/${reviewToDelete}/${adminId}`);
+      await axios.delete(`${process.env.REACT_APP_API_KEY}/reviews/${reviewToDelete}/${adminId}`);
       // If delete is successful, fetch reviews again to update the list
       fetchReviews();
       // Show the review deleted modal

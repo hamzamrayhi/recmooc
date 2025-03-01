@@ -59,7 +59,7 @@ const CoursePlanning = () => {
   const fetchStudySchedules = useCallback(async () => {
     try {
       const response = await axios.get(
-        `http://192.168.100.35/api/studyschedules/${userId}`
+        `${process.env.REACT_APP_API_KEY}/studyschedules/${userId}`
       );
       setStudySchedules(response.data);
     } catch (error) {
@@ -94,7 +94,7 @@ const CoursePlanning = () => {
       };
 
       const response = await axios.post(
-        "http://192.168.100.35/api/createstudyschedule",
+        `${process.env.REACT_APP_API_KEY}/createstudyschedule`,
         newSchedule
       );
       const createdSchedule = response.data;
@@ -112,7 +112,7 @@ const CoursePlanning = () => {
   const handleDeleteByMoocName = useCallback(async () => {
     try {
       await axios.delete(
-        `http://192.168.100.35/api/deletestudyschedule/${deleteMoocName}`
+        `${process.env.REACT_APP_API_KEY}/deletestudyschedule/${deleteMoocName}`
       );
       setStudySchedules((prevSchedules) =>
         prevSchedules.filter((schedule) => schedule.mooc_name !== deleteMoocName)
@@ -149,7 +149,7 @@ const CoursePlanning = () => {
       };
 
       await axios.put(
-        `http://192.168.100.35/api/updatestudyschedule/${selectedSchedule.id}`,
+        `${process.env.REACT_APP_API_KEY}/updatestudyschedule/${selectedSchedule.id}`,
         updatedSchedule
       );
 

@@ -24,7 +24,7 @@ const AdminInbox = () => {
 
   useEffect(() => {
     const fetchMessages = async () => {
-      const endpoint = 'http://192.168.100.35/api/contactus';
+      const endpoint = `${process.env.REACT_APP_API_KEY}/contactus`;
       const params = currentTab === 0 ? { adminId: user.id } : { unhandled: 'true' };
 
       try {
@@ -66,7 +66,7 @@ const AdminInbox = () => {
 
   const handleConfirmToggle = async () => {
     try {
-      await axios.put(`http://192.168.100.35/api/contactus/${messageToToggle.id}/solved`, { solved: !messageToToggle.solved });
+      await axios.put(`${process.env.REACT_APP_API_KEY}/contactus/${messageToToggle.id}/solved`, { solved: !messageToToggle.solved });
       setMessages(messages.map(msg => 
         msg.id === messageToToggle.id ? { ...msg, solved: !msg.solved } : msg
       ));
@@ -118,7 +118,7 @@ const AdminInbox = () => {
                     <CardHeader
                       avatar={
                         <img
-                          src={`http://192.168.100.35/api/${message.user_picture.replace(/\\/g, "/")}`}
+                          src={`${process.env.REACT_APP_API_KEY}/${message.user_picture.replace(/\\/g, "/")}`}
                           alt={`${message.username}'s profile`}
                           style={{ width: "75px", height: "75px", objectFit: "cover", cursor: "pointer", borderRadius: "50%" }}
                         />

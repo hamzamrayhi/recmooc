@@ -9,7 +9,7 @@ const AdminLogs = () => {
     useEffect(() => {
         const fetchLogs = async () => {
             try {
-                const response = await axios.get('http://192.168.100.35/api/admin_logs');
+                const response = await axios.get(`${process.env.REACT_APP_API_KEY}/admin_logs`);
                 setLogs(response.data);
             } catch (error) {
                 console.error('Error fetching logs:', error);

@@ -100,7 +100,7 @@ const BookmarksPage = () => {
   useEffect(() => {
     const fetchBookmarkedCoursesByCategory = async (categoryName) => {
       try {
-        const response = await axios.get(`http://192.168.100.35/api/bookmarked-courses/${userId}/category/${categoryName}`);
+        const response = await axios.get(`http://${process.env.REACT_APP_API_KEY}/bookmarked-courses/${userId}/category/${categoryName}`);
         console.log(`Fetched bookmarked courses for category ${categoryName}:`, response.data);
         setBookmarkedCourses(response.data);
       } catch (error) {
@@ -113,7 +113,7 @@ const BookmarksPage = () => {
 
   const fetchBookmarkedCoursesByCategory = async (categoryName) => {
     try {
-      const response = await axios.get(`http://192.168.100.35/api/bookmarked-courses/${userId}/category/${categoryName}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_KEY}/bookmarked-courses/${userId}/category/${categoryName}`);
       console.log(`Fetched bookmarked courses for category ${categoryName}:`, response.data);
       setBookmarkedCourses(response.data);
     } catch (error) {
@@ -124,7 +124,7 @@ const BookmarksPage = () => {
   const deleteBookmark = async (courseId) => {
     try {
       const response = await axios.delete(
-        `http://192.168.100.35/api/bookmarks/${courseId}`,
+        `${process.env.REACT_APP_API_KEY}/bookmarks/${courseId}`,
         {
           params: {
             userId: userId,

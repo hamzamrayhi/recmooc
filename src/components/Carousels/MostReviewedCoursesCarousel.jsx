@@ -75,7 +75,7 @@ const MostReviewedCoursesCarousel = ({ categoryName }) => {
   useEffect(() => {
     const fetchMostReviewedCourses = async () => {
       try {
-        const response = await axios.get(`http://192.168.100.35/api/most-reviewed-courses/${categoryName}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_KEY}/most-reviewed-courses/${categoryName}`);
         setMostReviewedCourses(response.data);
         console.log(response.data);
       } catch (error) {

@@ -7,7 +7,7 @@ function InstructorDetails() {
 
   const fetchHighestRatedInstructor = (category) => {
     fetch(
-      `http://192.168.100.35/api/highest-rated-instructor/${encodeURIComponent(
+      `${process.env.REACT_APP_API_KEY}/highest-rated-instructor/${encodeURIComponent(
         category
       )}`
     )

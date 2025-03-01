@@ -51,7 +51,7 @@ const ContactForm = () => {
     try {
       // Send form data to backend
       const response = await axios.post(
-        "http://192.168.100.35/api/contactus",
+        `${process.env.REACT_APP_API_KEY}/contactus`,
         formData
       );
       // Handle success (e.g., show success message to user)

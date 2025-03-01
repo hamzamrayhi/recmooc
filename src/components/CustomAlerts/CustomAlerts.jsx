@@ -8,7 +8,7 @@ export default function CustomAlerts({ isOpen, onClose, message, severity }) {
 
   return (
     <div style={{ width: '100%', zIndex: 9999, display: isOpen ? 'block' : 'none' }}>
-      <Alert severity={severity} action={
+      <Alert severity={severity || "info"} action={
           <IconButton aria-label="close" color="inherit" size="small" onClick={onClose}>
             <CloseIcon fontSize="inherit" />
           </IconButton>
