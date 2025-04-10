@@ -45,6 +45,25 @@ const NavigationUser = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   const userPicture = user ? user.user_picture : null;
 
+  const [recommendModalOpen, setRecommendModalOpen] = useState(false);
+const [recommendationData, setRecommendationData] = useState(null);
+const [loading, setLoading] = useState(false);
+
+const handleRecommendationClick = async () => {
+  setLoading(true);
+  
+  try {
+          const user = JSON.parse(window.localStorage.getItem("user"));
+          const response = await axios.post(`${process.env.REACT_APP_API_KEY}/recommender`, { user: user });
+        
+      console.log(response.data.response); // Log the response data to the console
+    setRecommendationData(response.data.response);
+    setRecommendModalOpen(true);
+  } catch (error) {
+    console.error("Error fetching recommendations:", error);
+  } 
+};
+
   const RightTooltipWithStyle = styled(({ className, ...props }) => (
     <Tooltip {...props} classes={{ popper: className }} />
   ))(({ theme }) => ({
@@ -85,6 +104,8 @@ const NavigationUser = () => {
     window.location.href = "/login";
   };
 
+
+ 
   const handleOpenModal = () => {
     setOpenModal(true);
   };
@@ -117,6 +138,9 @@ const NavigationUser = () => {
     setSelectedIssue(issue);
     setIssueModalOpen(false);
   };
+
+ 
+
 
   return (
     <>
@@ -230,6 +254,22 @@ const NavigationUser = () => {
                 </RightTooltipWithStyle>
               </Button>
             </MenuButtom>
+            <MenuButtom>
+  <Button onClick={handleRecommendationClick} style={{ color: "black" }}>
+    <RightTooltipWithStyle
+      title={<RightTooltip
+        text="Get personalized course recommendations based on your learning history"
+        buttonMessage="View Recommendations"
+      />}
+      placement="bottom-end"
+    >
+      <span style={{ color: "black" }}>
+        <img src={Checkericon} alt="Recommender" className="icon" style={{ width: '30px', marginRight: '5px', verticalAlign: 'middle' }} /> 
+        Recommender
+      </span>
+    </RightTooltipWithStyle>
+  </Button>
+</MenuButtom>
             <IconButton onClick={handleMenuOpen}>
               <Box
                 sx={{
@@ -273,6 +313,32 @@ const NavigationUser = () => {
           </Toolbar>
         </AppBar>
       </Box>
+      <Modal open={recommendModalOpen} onClose={() => setRecommendModalOpen(false)}>
+      <Box sx={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 600,
+        bgcolor: 'background.paper',
+        boxShadow: 24,
+        p: 4,
+      }}>
+        <h2>Course Recommendations</h2>
+        { 
+          recommendationData ? (
+          <div>
+            <ul>
+              {
+                <li key={"e"} style={{fontSize:"3rem"}}>{recommendationData}</li>
+              }
+            </ul>
+          </div>
+        ) : (
+          <p>No recommendations available</p>
+        )}
+      </Box>
+    </Modal>
 
       <Modal open={issueModalOpen} onClose={handleCloseIssueModal}>
   <Box
